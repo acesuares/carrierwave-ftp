@@ -22,11 +22,7 @@ module CarrierWave
         end
 
         def store(file)
-          connection do |ftp|
-            ftp.mkdir_p(::File.dirname "#{@uploader.ftp_folder}/#{path}")
-            ftp.chdir(::File.dirname "#{@uploader.ftp_folder}/#{path}")
-            ftp.put(file.path, filename)
-          end
+          puts "#{file}"
         end
 
         def url
