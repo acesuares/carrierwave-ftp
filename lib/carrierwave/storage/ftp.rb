@@ -32,7 +32,10 @@ module CarrierWave
         def url
           "#{@uploader.ftp_url}/#{path}"
         end
-
+  
+        def bla
+        end
+        
         def filename(options = {})
           url.gsub(/.*\/(.*?$)/, '\1')
         end
